@@ -11,7 +11,7 @@ class KitchenRoom(models.Model):
     )
 
     ROOMSHAPE = (
-        ('Linear(Two Parallel Lines)', 'Linear(Two Parallel Lines)'),
+        ('Linear (Two Parallel Lines)', 'Linear (Two Parallel Lines)'),
         ('L-shaped', 'L-shaped'),
         ('U-shaped', 'U-shaped')
     )
