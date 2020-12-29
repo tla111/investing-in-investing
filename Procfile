@@ -1,0 +1,1 @@
+web: gunicorn investmentbox.wsgi —log-file - 

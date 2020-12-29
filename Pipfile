@@ -9,6 +9,12 @@ verify_ssl = true
 django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+django-filter = "*"
+django-storages = "*"
+boto3 = "*"
+pillow = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.9"
