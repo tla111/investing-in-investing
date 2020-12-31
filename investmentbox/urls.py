@@ -18,11 +18,12 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from api.views import KitchenViewSet, LivingRoomViewSet
+from api.views import KitchenViewSet, LivingRoomViewSet, BedRoomViewSet
 
 router = routers.DefaultRouter()
 router.register(r'kitchen', KitchenViewSet)
 router.register(r'livingroom', LivingRoomViewSet)
+router.register(r'bedroom', BedRoomViewSet)
 
 
 urlpatterns = [
