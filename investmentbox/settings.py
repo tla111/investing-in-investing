@@ -61,7 +61,7 @@ ROOT_URLCONF = 'investmentbox.urls'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://investing-in-investing.herokuapp.com'
+    'https://investing-in-investing.herokuapp.com'
 ]
 
 TEMPLATES = [
