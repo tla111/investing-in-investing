@@ -33,3 +33,67 @@ class KitchenRoom(models.Model):
 
     def __str__(self):
         return self.counter_top
+
+
+class LivingRoom(models.Model):
+    SOFASTYPES = (
+        ('Chesterfield (Classic)', 'Chesterfield (Classic)'),
+        ('Mid-Century (Modern)', 'Mid-Century (Modern)'),
+        ('Lawson (Transitional)', 'Lawson (Transitional)')
+    )
+
+    TVTYPES = (
+        ('OLED', 'OLED'),
+        ('LED', 'LED'),
+        ('Plasma', 'Plasma')
+    )
+
+    CHAIRTYPES = (
+        ('Egg', 'Egg'),
+        ('Wingback', 'Wingback'),
+        ('Chaise Lounge', 'Chaise Lounge')
+    )
+
+    sofas = models.CharField(
+        max_length=200, choices=SOFASTYPES, blank=True, null=True, default=None)
+
+    televisions = models.CharField(
+        max_length=200, choices=TVTYPES, blank=True, null=True, default=None)
+
+    chairs = models.CharField(
+        max_length=200, choices=CHAIRTYPES, blank=True, null=True, default=None)
+
+    def __str__(self):
+        return self.sofas
+
+
+class BedRoom(models.Model):
+    BEDSIZE = (
+        ('Twin', 'Twin'),
+        ('Full', 'Full'),
+        ('Queen', 'Queen'),
+    )
+
+    DRESSERSTYPES = (
+        ('Horizontal', 'Horizontal'),
+        ('Vertical', 'Vertical'),
+        ('Gentlemen Chest', 'Gentlemen Chest')
+    )
+
+    DESKTYPES = (
+        ('Modern', 'Modern'),
+        ('Small', 'Small'),
+        ('Corner', 'Corner')
+    )
+
+    beds = models.CharField(
+        max_length=200, choices=BEDSIZE, blank=True, null=True, default=None)
+
+    dressers = models.CharField(
+        max_length=200, choices=DRESSERSTYPES, blank=True, null=True, default=None)
+
+    desks = models.CharField(
+        max_length=200, choices=DESKTYPES, blank=True, null=True, default=None)
+
+    def __str__(self):
+        return self.beds
